@@ -7,6 +7,8 @@
 * WADL
 
 * jersey unit-test?
+	- http://code.google.com/p/rest-assured/
+	- https://blogs.oracle.com/naresh/entry/jersey_test_framework_makes_it
 
 
 ###EOF
