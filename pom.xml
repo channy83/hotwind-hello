@@ -45,17 +45,6 @@
 			<version>3.1.1</version>
 		</dependency>
 		<dependency>
-			<groupId>commons-logging</groupId>
-			<artifactId>commons-logging</artifactId>
-			<version>1.1.1</version>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.logging.log4j</groupId>
-			<artifactId>log4j</artifactId>
-			<version>2.0-alpha1</version>
-			<type>pom</type>
-		</dependency>
-		<dependency>
 			<groupId>commons-configuration</groupId>
 			<artifactId>commons-configuration</artifactId>
 			<version>1.8</version>
@@ -69,6 +58,26 @@
 		 	<groupId>com.oracle</groupId>
 		 	<artifactId>ojdbc14</artifactId>
 		 	<version>1.4</version>
+		 </dependency>
+		 <dependency>
+		 	<groupId>org.slf4j</groupId>
+		 	<artifactId>slf4j-api</artifactId>
+		 	<version>1.6.6</version>
+		 </dependency>
+		 <dependency>
+		 	<groupId>com.google.guava</groupId>
+		 	<artifactId>guava</artifactId>
+		 	<version>13.0</version>
+		 </dependency>
+		 <dependency>
+		 	<groupId>commons-lang</groupId>
+		 	<artifactId>commons-lang</artifactId>
+		 	<version>2.6</version>
+		 </dependency>
+		 <dependency>
+		 	<groupId>org.slf4j</groupId>
+		 	<artifactId>slf4j-log4j12</artifactId>
+		 	<version>1.6.6</version>
 		 </dependency>
 	</dependencies>
 </project>

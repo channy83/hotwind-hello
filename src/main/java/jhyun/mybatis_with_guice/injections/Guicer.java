@@ -3,15 +3,15 @@ package jhyun.mybatis_with_guice.injections;
 import jhyun.mybatis_with_guice.config.AppConfig;
 
 import org.apache.commons.configuration.PropertiesConfiguration;
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
 import org.mybatis.guice.XMLMyBatisModule;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.google.inject.Guice;
 import com.google.inject.Injector;
 
 public class Guicer {
-	private static Log log = LogFactory.getLog(Guicer.class);
+	private static Logger logger = LoggerFactory.getLogger(Guicer.class);
 	private static Injector injector;
 	private static PropertiesConfiguration appConfig;
 
@@ -19,7 +19,7 @@ public class Guicer {
 		appConfig = AppConfig.load();
 		final String environment = appConfig.getString("environment",
 				"development");
-		log.debug(String.format("selected-env=[%s]", environment));
+		logger.debug(String.format("selected-env=[%s]", environment));
 		injector = Guice.createInjector(new XMLMyBatisModule() {
 			@Override
 			protected void initialize() {
