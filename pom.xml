@@ -49,16 +49,6 @@
 			<artifactId>commons-configuration</artifactId>
 			<version>1.8</version>
 		</dependency>
-		<!-- NOTE:
-		> mvn install:install-file 
-			-DgroupId=com.oracle -DartifactId=ojdbc14 -Dversion=1.4 
-			-Dpackaging=jar -Dfile=ojdbc-14.jar 
-		 -->
-		 <dependency>
-		 	<groupId>com.oracle</groupId>
-		 	<artifactId>ojdbc14</artifactId>
-		 	<version>1.4</version>
-		 </dependency>
 		 <dependency>
 		 	<groupId>org.slf4j</groupId>
 		 	<artifactId>slf4j-api</artifactId>
@@ -78,6 +68,11 @@
 		 	<groupId>org.slf4j</groupId>
 		 	<artifactId>slf4j-log4j12</artifactId>
 		 	<version>1.6.6</version>
+		 </dependency>
+		 <dependency>
+		 	<groupId>org.hsqldb</groupId>
+		 	<artifactId>hsqldb</artifactId>
+		 	<version>2.2.8</version>
 		 </dependency>
 	</dependencies>
 </project>
