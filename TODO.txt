@@ -1,0 +1,9 @@
+* JAX-RS (jersey) + Servlet
+
+* jersey + guice
+
+* jersey-json?
+
+* WADL
+
+
