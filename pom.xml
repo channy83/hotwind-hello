@@ -44,5 +44,31 @@
 			<artifactId>mybatis</artifactId>
 			<version>3.1.1</version>
 		</dependency>
+		<dependency>
+			<groupId>commons-logging</groupId>
+			<artifactId>commons-logging</artifactId>
+			<version>1.1.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>2.0-alpha1</version>
+			<type>pom</type>
+		</dependency>
+		<dependency>
+			<groupId>commons-configuration</groupId>
+			<artifactId>commons-configuration</artifactId>
+			<version>1.8</version>
+		</dependency>
+		<!-- NOTE:
+		> mvn install:install-file 
+			-DgroupId=com.oracle -DartifactId=ojdbc14 -Dversion=1.4 
+			-Dpackaging=jar -Dfile=ojdbc-14.jar 
+		 -->
+		 <dependency>
+		 	<groupId>com.oracle</groupId>
+		 	<artifactId>ojdbc14</artifactId>
+		 	<version>1.4</version>
+		 </dependency>
 	</dependencies>
 </project>
