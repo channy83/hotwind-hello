@@ -28,5 +28,6 @@ public class App implements Runnable {
 		logger.info(ObjectUtils.toString(sqlSession));
 		logger.info(ObjectUtils.toString(helloMapper));
 		logger.info(String.format("1 + 1 = %s", helloMapper.onePlusOne()));
+		logger.info(String.format("2 + 3 = %s", helloMapper.plus(2, 3)));
 	}
 }

@@ -3,7 +3,13 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="jhyun.mybatis_with_guice.sqlmaps.HelloMapper">
-  <select id="onePlusOne" resultType="int">
-    select 1+1 from dual
-  </select>
+	<select id="onePlusOne" resultType="int">
+		select 1+1 from dual
+	</select>
+	
+	<select id="plus" parameterType="map" resultType="int">
+		select #{a} + #{b} from dual
+	</select>
+	
+	
 </mapper>
