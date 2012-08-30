@@ -15,7 +15,7 @@ public class AppConfig {
 	public static synchronized PropertiesConfiguration load() {
 		if (loaded == null) {
 			try {
-				URL url = AppConfig.class.getResource("app-config.properties");
+				URL url = AppConfig.class.getResource("./app-config.properties");
 				log.debug(String.format("app-config.properties url = %s", url));
 				loaded = new PropertiesConfiguration(url);
 			} catch (Exception e) {
