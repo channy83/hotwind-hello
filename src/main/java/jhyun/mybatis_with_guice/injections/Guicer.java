@@ -19,7 +19,7 @@ public class Guicer {
 		appConfig = AppConfig.load();
 		final String environment = appConfig.getString("environment",
 				"development");
-		log.info(String.format("selected-env=[%s]", environment));
+		log.debug(String.format("selected-env=[%s]", environment));
 		injector = Guice.createInjector(new XMLMyBatisModule() {
 			@Override
 			protected void initialize() {
