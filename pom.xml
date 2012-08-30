@@ -25,6 +25,17 @@
 					<target>1.6</target>
 				</configuration>
 			</plugin>
+			<!-- jetty:run -->
+			<plugin>
+				<groupId>org.mortbay.jetty</groupId>
+				<artifactId>jetty-maven-plugin</artifactId>
+				<configuration>
+					<scanIntervalSeconds>10</scanIntervalSeconds>
+					<webApp>
+						<contextPath>/</contextPath>
+					</webApp>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
 
