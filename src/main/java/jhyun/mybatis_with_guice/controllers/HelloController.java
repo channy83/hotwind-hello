@@ -6,11 +6,17 @@ import javax.ws.rs.Produces;
 
 import org.apache.commons.lang.ObjectUtils;
 import org.apache.ibatis.session.SqlSession;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.google.inject.Inject;
+import com.google.inject.servlet.RequestScoped;
 
 @Path("/hello")
+@RequestScoped
 public class HelloController {
+
+	private Logger logger = LoggerFactory.getLogger(HelloController.class);
 
 	@GET
 	@Path("/greet")
@@ -26,9 +32,10 @@ public class HelloController {
 	@Path("/sqlsession")
 	@Produces("text/plain")
 	public String showSqlSession() {
-		return ObjectUtils.toString(sqlSession);
+		final String s = String.format("this=%s, sqlSession=%s", this,
+				ObjectUtils.toString(sqlSession));
+		logger.debug(s);
+		return s;
 	}
-
-	// TODO: plus
 
 }

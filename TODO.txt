@@ -1,6 +1,6 @@
-* JAX-RS (jersey) + Servlet
+DONE * JAX-RS (jersey) + Servlet
 
-* jersey + guice
+DONE * jersey + guice
 
 * jersey-json?
 
@@ -13,6 +13,19 @@
 
 * hazelcast-expirabled-map instead no-sessions
 
+
+* WORKFLOW TODOs
+	- maven, eclipse, m2eclipse.
+	- maven and ojdbc.
+	- add new sqlmap?
+	- add new controller/service?
+	- basic db-connection settings?
+	- change environment?
+	- use sessions?
+	- static/public files?
+	- simple unit-tests?
+	- jax-rs tests?
+	- jax-rs clients?
 
 ###EOF
 

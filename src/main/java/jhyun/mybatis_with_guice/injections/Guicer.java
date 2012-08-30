@@ -27,6 +27,11 @@ public class Guicer {
 	static {
 		//
 		Configuration config = AppConfig.load();
+		List<Module> moduleObjs = bindModules(config);
+		injector = Guice.createInjector(moduleObjs);
+	}
+
+	private static List<Module> bindModules(Configuration config) {
 		List<Object> moduleClassFqns = config.getList("app.guice-modules",
 				new ArrayList<Object>());
 		logger.debug(String.format("guice-module-class-fqns = %s",
@@ -39,13 +44,15 @@ public class Guicer {
 						.forName((String) moduleClassFqn);
 				Module moduleObj = moduleClass.newInstance();
 				moduleObjs.add(moduleObj);
+				logger.info(String.format("guice-module bound = [%s]",
+						moduleClass));
 			} catch (Exception e) {
 				logger.warn(String
 						.format("app.guice-modules specified guice-module-class not found.",
 								e));
 			}
 		}
-		injector = Guice.createInjector(moduleObjs);
+		return moduleObjs;
 	}
 
 	/** use this! */

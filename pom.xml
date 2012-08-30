@@ -105,7 +105,17 @@
 		 	<groupId>commons-beanutils</groupId>
 		 	<artifactId>commons-beanutils</artifactId>
 		 	<version>1.8.3</version>
-		 	<scope>test</scope>
+		 	<scope>runtime</scope>
+		 </dependency>
+		 <dependency>
+		 	<groupId>com.sun.jersey.contribs</groupId>
+		 	<artifactId>jersey-guice</artifactId>
+		 	<version>1.13</version>
+		 </dependency>
+		 <dependency>
+		 	<groupId>javax.servlet</groupId>
+		 	<artifactId>javax.servlet-api</artifactId>
+		 	<version>3.0.1</version>
 		 </dependency>
 	</dependencies>
 </project>
