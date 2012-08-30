@@ -10,6 +10,12 @@ import org.slf4j.LoggerFactory;
 import com.google.inject.Guice;
 import com.google.inject.Injector;
 
+/**
+ * Guice Injector.
+ * 
+ * @author jhyun
+ * @since 2012-08-30
+ */
 public class Guicer {
 	private static Logger logger = LoggerFactory.getLogger(Guicer.class);
 	private static Injector injector;
@@ -29,6 +35,7 @@ public class Guicer {
 		});
 	}
 
+	/** use this! */
 	public static Injector get() {
 		return injector;
 	}
