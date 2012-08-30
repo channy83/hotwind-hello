@@ -11,5 +11,8 @@
 	- https://blogs.oracle.com/naresh/entry/jersey_test_framework_makes_it
 
 
+* hazelcast-expirabled-map instead no-sessions
+
+
 ###EOF
 
