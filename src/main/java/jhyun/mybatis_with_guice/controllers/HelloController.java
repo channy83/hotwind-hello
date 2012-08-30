@@ -1,14 +1,20 @@
 package jhyun.mybatis_with_guice.controllers;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
+import javax.ws.rs.QueryParam;
+import javax.ws.rs.core.MediaType;
 
 import org.apache.commons.lang.ObjectUtils;
 import org.apache.ibatis.session.SqlSession;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.google.common.collect.ImmutableMap;
 import com.google.inject.Inject;
 import com.google.inject.servlet.RequestScoped;
 
@@ -36,6 +42,18 @@ public class HelloController {
 				ObjectUtils.toString(sqlSession));
 		logger.debug(s);
 		return s;
+	}
+
+	@GET
+	@Path("/plus")
+	@Produces(MediaType.APPLICATION_JSON)
+	public Map<String, Object> plus(@QueryParam("a") final int a,
+			@QueryParam("b") final int b) {
+		Map<String, Object> m = new HashMap<String, Object>();
+		m.putAll(new ImmutableMap.Builder<String, Object>()
+				.put("a", Integer.valueOf(a)).put("b", Integer.valueOf(b))
+				.put("result", Integer.valueOf(a + b)).build());
+		return m;
 	}
 
 }

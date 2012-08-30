@@ -29,10 +29,11 @@ public class JerseyServletModule extends ServletModule {
 		/**
 		 * <code>
 		//params.put("com.sun.jersey.config.feature.ImplicitViewables", "true");
-		//params.put("com.sun.jersey.config.feature.Redirect", "true");
 		//params.put("com.sun.jersey.config.property.packages", "net.cknudsen.jerseyexample.web");
 		 </code>
 		 */
+		params.put("com.sun.jersey.config.feature.Redirect", "true");
+		params.put("com.sun.jersey.api.json.POJOMappingFeature", "true");
 		//
 		serveRegex("/public/.*").with(DefaultWrapperServlet.class);
 		serve("/*").with(GuiceContainer.class, params);

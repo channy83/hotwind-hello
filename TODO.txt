@@ -2,7 +2,7 @@ DONE * JAX-RS (jersey) + Servlet
 
 DONE * jersey + guice
 
-* jersey-json?
+DONE * jersey-json?
 
 * WADL
 
