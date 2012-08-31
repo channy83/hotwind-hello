@@ -14,6 +14,7 @@ public class PlusParams implements Serializable {
 	private static final long serialVersionUID = -2012926641164201114L;
 
 	private int a;
+
 	private int b;
 
 	public int getA() {
@@ -35,7 +36,7 @@ public class PlusParams implements Serializable {
 	public PlusParams() {
 		super();
 	}
-	
+
 	public PlusParams(int a, int b) {
 		super();
 		this.a = a;

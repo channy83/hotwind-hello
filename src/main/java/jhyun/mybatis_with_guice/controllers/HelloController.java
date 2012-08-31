@@ -76,4 +76,12 @@ public class HelloController {
 		return new PlusParams(3, 4);
 	}
 
+	@POST
+	@Path("/plusWithXml")
+	@Consumes(MediaType.APPLICATION_XML)
+	@Produces(MediaType.APPLICATION_XML)
+	public PlusResult plusWithXml(PlusParams params) {
+		return new PlusResult(params, params.getA() + params.getB());
+	}
+
 }
