@@ -6,7 +6,7 @@
 	
 	* Jersey JAX-RS + JSON + Guice + MyBatis + Transactional
 	
-	* Hazelcast for Sessions, Caches
+	* Jersey Requests, Sessions
 	
 	* Testing RESTful API
 	
