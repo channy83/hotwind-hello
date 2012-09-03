@@ -1,14 +1,36 @@
 # 적용 내용들
 
-	* Guice + MyBatis + Commons-Configuration
+	* Guice
+		- http://code.google.com/p/google-guice/ 
+		- http://en.wikipedia.org/wiki/Google_Guice
+		- http://code.google.com/p/google-guice/wiki/GettingStarted
 	
+	* Commons-Configuration
+		- http://commons.apache.org/configuration/
+		
 	* SLF4J + Log4j
+		- http://www.slf4j.org/
+		- http://logging.apache.org/log4j/1.2/index.html
 	
-	* Jersey JAX-RS + JSON + Guice + MyBatis + Transactional
+	* Guice + MyBatis + Transactional
+		- http://www.mybatis.org/core/
+		- http://code.google.com/p/mybatis/wiki/Guice
+		- http://code.google.com/p/google-guice/wiki/Transactions
+	
+	* Jersey JAX-RS, JSON
+		- http://en.wikipedia.org/wiki/Java_API_for_RESTful_Web_Services
+		- http://jersey.java.net/
+		- http://jersey.java.net/nonav/documentation/latest/json.html
 	
 	* Jersey Requests, Sessions
+		- https://cwiki.apache.org/WINK/jax-rs-context-information.html
+		- http://jersey.java.net/nonav/documentation/latest/user-guide.html#d4e516
 	
 	* Testing RESTful API
+		- http://jersey.java.net/nonav/documentation/latest/user-guide.html#d4e609
+		- http://junit.sourceforge.net/
+		- http://junit.sourceforge.net/doc/cookbook/cookbook.htm
+		
 
 
 	
@@ -22,12 +44,14 @@
 		- http://www.eclipse.org/m2e/
 		
 	3. 이클립스 "import project / existing maven project"으로 가져오기.
-		- 
+		- http://stackoverflow.com/a/7711398
 	
-	4. Maven에서 jetty:run 타겟 실행하여 내장 웹서버 기동.
+	4. Maven에서 "jetty:run" goal 실행하여 내장 웹서버 기동.
+		- http://www.egovframe.org/wiki/doku.php?id=egovframework:dev:tst:%EC%9D%B4%ED%81%B4%EB%A6%BD%EC%8A%A4%EC%97%90%EC%84%9C_maven_%EC%8B%A4%ED%96%89%ED%95%98%EA%B8%B0
+		- http://docs.codehaus.org/display/JETTY/Maven+Jetty+Plugin
 	
 	5. /mybatis-with-guice/src/test/java/jhyun/mybatis_with_guice/tests/AllTests.java 테스트 모음 실행하여 단위테스트 수행.
-	
+		- http://www.vogella.com/articles/JUnit/article.html#juniteclipse_eclipse
 	
 	
 ###EOF
