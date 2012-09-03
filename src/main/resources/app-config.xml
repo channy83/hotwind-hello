@@ -10,4 +10,7 @@
 			jhyun.mybatis_with_guice.controllers.HelloController
 		</jersey-modules>
 	</app>
+	<test>
+		<api-url-prefix>http://localhost:8080</api-url-prefix>
+	</test>
 </config>

@@ -14,9 +14,9 @@ CANCEL* hazelcast-expirable-map instead no-sessions
 
 
 * jersey unit-test?
-	- http://jersey.java.net/nonav/documentation/latest/test-framework.html
-	- TODO: destination url via app-configs + junit w/injected jersey-connection.
-	- TODO: Plus
+	CANCEL - http://jersey.java.net/nonav/documentation/latest/test-framework.html
+	DONE - TODO: destination url via app-configs + junit w/injected jersey-connection.
+	DONE - Plus
 	- TODO: Transactions
 
 
