@@ -13,6 +13,12 @@ import org.junit.Test;
 
 import com.google.inject.Inject;
 
+/**
+ * Jersey Client을 활용하여 RESTful-API 호출하는 예시.
+ * 
+ * @author jhyun
+ * @since 2012-09-03
+ */
 public class SimpleTransactionClientTestCase {
 
 	public SimpleTransactionClientTestCase() {

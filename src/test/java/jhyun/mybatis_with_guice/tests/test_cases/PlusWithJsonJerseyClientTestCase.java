@@ -13,6 +13,13 @@ import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * Jersey Client을 활용한 덧셈 테스트.
+ * 
+ * @author jhyun
+ * @since 2012-09-03
+ * 
+ */
 public class PlusWithJsonJerseyClientTestCase {
 
 	private static Logger logger = LoggerFactory

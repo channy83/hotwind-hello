@@ -9,6 +9,12 @@ import org.apache.commons.lang.ObjectUtils;
 
 import com.google.common.base.Objects;
 
+/**
+ * 간단한 MyBatis 연동 API 테스트용 헬퍼.
+ * 
+ * @author jhyun
+ * @since 2012-09-03
+ */
 public class SimpleTransactionHelper {
 
 	public List listAll() {

@@ -10,8 +10,19 @@ import org.slf4j.LoggerFactory;
 /**
  * Simple MyBatis + Guice Configuration By XML Module.
  * 
+ * Guicer의 의해서 생성된다. 상속을 통한 Injection의 용도도 있고(SqlMapper, SqlSession등
+ * MyBatis특유의), 설정파일을 읽어 MyBatis을 초기화하는 목적도 있다.
+ * 
+ * 여기서 SqlMapper등의 Injection을 위해서는 XMLMyBatisModule을 상속하는것으로.
+ * 
+ * 설정 파일을 읽고, 기본 환경을 설정하는것은 initialize 메서드에서.
+ * 
  * @author jhyun
  * @since 2012-08-30
+ * 
+ * @see Guicer
+ * @see AppConfig
+ * @see XMLMyBatisModule
  */
 public class MyBatisXmlModule extends XMLMyBatisModule {
 	private static Logger logger = LoggerFactory

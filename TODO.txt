@@ -13,11 +13,11 @@ CANCEL* hazelcast-expirable-map instead no-sessions
 	--> @Context으로 HttpServletRequest 같은것들.
 
 
-* jersey unit-test?
+DONE * jersey unit-test?
 	CANCEL - http://jersey.java.net/nonav/documentation/latest/test-framework.html
 	DONE - TODO: destination url via app-configs + junit w/injected jersey-connection.
 	DONE - Plus
-	- TODO: Transactions
+	DONE - Transactions
 
 
 * javadocs!

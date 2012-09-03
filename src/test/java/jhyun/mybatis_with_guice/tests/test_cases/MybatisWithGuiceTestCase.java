@@ -10,6 +10,13 @@ import org.junit.Test;
 
 import com.google.inject.Injector;
 
+/**
+ * mybatis + guice 연동이 잘 되는지?
+ * 
+ * @author jhyun
+ * @since 2012-09-03
+ * 
+ */
 public class MybatisWithGuiceTestCase {
 
 	private Injector getInjector() {

@@ -10,6 +10,14 @@ import com.sun.jersey.api.client.config.ClientConfig;
 import com.sun.jersey.api.client.config.DefaultClientConfig;
 import com.sun.jersey.api.json.JSONConfiguration;
 
+/**
+ * Jersey Client을 활용하는 단위 테스트 도우미.
+ * 
+ * app-config.xml등의 설정에서 test.api-url-prefix 설정에 영향을 받음.
+ * 
+ * @author jhyun
+ * @since 2012-09-03
+ */
 public class JerseyTestingClient {
 
 	public static WebResource webResource() {

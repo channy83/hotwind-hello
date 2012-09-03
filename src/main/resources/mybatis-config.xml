@@ -15,6 +15,7 @@
 		</environment>
 	</environments>
 	<mappers>
+		<!-- NOTE: 이하에 늘어나는 매퍼 XML들을 적어주세요. -->
 		<mapper resource="sqlmaps/hello.xml" />
 	</mappers>
 </configuration>

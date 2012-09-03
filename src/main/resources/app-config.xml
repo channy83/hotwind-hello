@@ -9,6 +9,8 @@
 		<jersey-modules>
 			jhyun.mybatis_with_guice.controllers.HelloController
 		</jersey-modules>
+		<default-serve-url-regex>/public/.*</default-serve-url-regex>
+		<jersey-serve-url-pattern>/*</jersey-serve-url-pattern>
 	</app>
 	<test>
 		<api-url-prefix>http://localhost:8080</api-url-prefix>

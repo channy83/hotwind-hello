@@ -11,6 +11,12 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.google.inject.Singleton;
 
+/**
+ * Jersey이 처리하지 않고, 정적 파일이나 다른 요청으로 매핑될 경우에 Redirector.
+ * 
+ * @author jhyun
+ * @since 2012-09-03
+ */
 @Singleton
 public class DefaultWrapperServlet extends HttpServlet {
 
