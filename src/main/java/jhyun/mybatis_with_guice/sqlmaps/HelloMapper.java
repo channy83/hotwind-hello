@@ -25,4 +25,6 @@ public interface HelloMapper {
 
 	void insertIntoTestingTable(@Param("n") final String n);
 
+	void deleteAllTestingTable();
+
 }

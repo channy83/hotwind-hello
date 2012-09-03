@@ -41,8 +41,11 @@ public class HelloController {
 	public String getClichedMessage() {
 		return "Hello World";
 	}
-	
-	/* SECTION: Sessions, Connections ********************************************* */
+
+	/*
+	 * SECTION: Sessions, Connections
+	 * *********************************************
+	 */
 
 	@Context
 	private HttpServletRequest request;
@@ -95,7 +98,7 @@ public class HelloController {
 	public PlusParams examplePlusParams() {
 		return new PlusParams(3, 4);
 	}
-	
+
 	@POST
 	@Path("/plusWithXml")
 	@Consumes(MediaType.APPLICATION_XML)
@@ -103,10 +106,7 @@ public class HelloController {
 	public PlusResult plusWithXml(PlusParams params) {
 		return new PlusResult(params, params.getA() + params.getB());
 	}
-	
 
-	
-	
 	/* SECTION: Transactions ********************************************* */
 
 	@Inject
@@ -163,6 +163,15 @@ public class HelloController {
 		hello.insertIntoTestingTable("3");
 		//
 		throw new Exception("JUST ABORTED FOR TESTING-PURPOSES.");
+	}
+
+	@GET
+	@Path("/transaction/deleteAll")
+	@Produces(MediaType.TEXT_PLAIN)
+	public String deleteAllTestingTable() {
+		hello.createTestingTable(true);
+		hello.deleteAllTestingTable();
+		return "OK.";
 	}
 
 }

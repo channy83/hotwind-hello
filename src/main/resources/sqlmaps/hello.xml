@@ -31,5 +31,9 @@
     <insert id="insertIntoTestingTable" parameterType="map">
     	INSERT INTO FOO (id) VALUES(#{n})
     </insert>
+    
+    <delete id="deleteAllTestingTable" >
+    	DELETE FROM FOO
+    </delete>
 	
 </mapper>
