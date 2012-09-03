@@ -9,39 +9,15 @@ DONE * WADL
 
 DONE * transactions
 
-* hazelcast-expirable-map instead no-sessions
+CANCEL* hazelcast-expirable-map instead no-sessions
+	--> @Context으로 HttpServletRequest 같은것들.
 
 
 * jersey unit-test?
 	- http://jersey.java.net/nonav/documentation/latest/test-framework.html
+	- TODO: destination url via app-configs + junit w/injected jersey-connection.
 	- TODO: Plus
 	- TODO: Transactions
-
-
-
-아래처럼? 아님 그냥 jersey-client으로 하나 만들어도 되겠군. app-config에 테스트용 주소 하나 남겨놓고.
-mvn clean install -Djersey.test.containerFactory=
-jersey-test-framework-http
-
-com.sun.jersey.test.framework.spi.container.http.HTTPContainerFactory
-
-
-
-public class MainTest extends JerseyTest {
-
-    public MainTest()throws Exception {
-        super("com.sun.jersey.samples.helloworld.resources");
-    }
-
-    @Test
-    public void testHelloWorld() {
-        WebResource webResource = resource();
-        String responseMsg = webResource.path("helloworld").get(String.class);
-        assertEquals("Hello World", responseMsg);
-    }
-
-}
-
 
 
 * javadocs!
