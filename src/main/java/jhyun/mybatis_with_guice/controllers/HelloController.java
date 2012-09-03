@@ -3,12 +3,14 @@ package jhyun.mybatis_with_guice.controllers;
 import java.util.HashMap;
 import java.util.Map;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
+import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 
 import jhyun.mybatis_with_guice.controllers.hello.plus.PlusParams;
@@ -74,6 +76,16 @@ public class HelloController {
 	@Produces(MediaType.APPLICATION_JSON)
 	public PlusParams examplePlusParams() {
 		return new PlusParams(3, 4);
+	}
+
+	@Context
+	private HttpServletRequest request;
+
+	@GET
+	@Path("/httpSession")
+	@Produces(MediaType.TEXT_PLAIN)
+	public String showHttpSession() {
+		return ObjectUtils.toString(request.getSession());
 	}
 
 }
