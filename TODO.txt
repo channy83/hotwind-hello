@@ -4,14 +4,47 @@ DONE * jersey + guice
 
 DONE * jersey-json?
 
-* WADL
+DONE * WADL 
+	-- /application.wadl
+
+DONE * transactions
+
+* hazelcast-expirable-map instead no-sessions
+
 
 * jersey unit-test?
-	- http://code.google.com/p/rest-assured/
-	- https://blogs.oracle.com/naresh/entry/jersey_test_framework_makes_it
+	- http://jersey.java.net/nonav/documentation/latest/test-framework.html
+	- TODO: Plus
+	- TODO: Transactions
 
 
-* hazelcast-expirabled-map instead no-sessions
+
+아래처럼? 아님 그냥 jersey-client으로 하나 만들어도 되겠군. app-config에 테스트용 주소 하나 남겨놓고.
+mvn clean install -Djersey.test.containerFactory=
+jersey-test-framework-http
+
+com.sun.jersey.test.framework.spi.container.http.HTTPContainerFactory
+
+
+
+public class MainTest extends JerseyTest {
+
+    public MainTest()throws Exception {
+        super("com.sun.jersey.samples.helloworld.resources");
+    }
+
+    @Test
+    public void testHelloWorld() {
+        WebResource webResource = resource();
+        String responseMsg = webResource.path("helloworld").get(String.class);
+        assertEquals("Hello World", responseMsg);
+    }
+
+}
+
+
+
+* javadocs!
 
 
 * WORKFLOW TODOs

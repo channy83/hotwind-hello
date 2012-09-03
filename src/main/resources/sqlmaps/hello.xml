@@ -13,4 +13,23 @@
 	</select>
 	
 	
+
+    <update id="createTestingTable" parameterType="map"> 
+        CREATE TABLE <if test="ifNotExists">IF NOT EXISTS</if> FOO (
+                id             INT PRIMARY KEY 
+        ) 
+    </update>
+    
+    <update id="dropTestingTable" >
+    	DROP TABLE IF EXISTS FOO
+    </update>
+    
+    <select id="listAllTestingTable" resultType="map" >
+    	SELECT id FROM FOO 
+    </select>
+    
+    <insert id="insertIntoTestingTable" parameterType="map">
+    	INSERT INTO FOO (id) VALUES(#{n})
+    </insert>
+	
 </mapper>
