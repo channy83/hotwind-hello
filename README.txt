@@ -58,5 +58,16 @@
 		- http://www.vogella.com/articles/JUnit/article.html#juniteclipse_eclipse
 	
 	
+# WAS 배치용 WAR 패키징
+	> mvn war:war
+
+	
+	
+# Maven 비지원 라이브러리 지원
+	- Oracle JDBC 드라이버와 같은 경우에 jar을 직접 개발자 피씨의 Local Repository에 직접 "mvn install"후 의존하도록.
+
+
+
+	
 ###EOF
 
