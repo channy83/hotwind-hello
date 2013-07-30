@@ -24,11 +24,11 @@ DONE * Viewable example?
 
 DONE * jsp-el? jstl?
 
-* /public?
+DONE * /public?
 
-* /public config-ize.
+DONE * /public config-ize.
 
-* no serve-urls?
+DONE * no serve-urls?
 
 
 * javadocs!

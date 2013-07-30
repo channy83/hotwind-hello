@@ -50,9 +50,6 @@ public class JerseyServletModule extends ServletModule {
 		Configuration config = AppConfig.load();
 		final Map<String, String> jerseyProperties = loadJerseyProperties(config);
 		logger.debug(String.format("jersey-properties = %s", jerseyProperties));
-		// FIXME:
-		serveRegex(config.getString("default-serve-url-regex", "/public/.*"))
-				.with(DefaultWrapperServlet.class);
 		//
 		final String jerseyServeUrlPattern = config.getString(
 				"jersey-serve-url-pattern", "/*");
