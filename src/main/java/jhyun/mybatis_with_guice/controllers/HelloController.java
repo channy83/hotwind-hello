@@ -28,6 +28,7 @@ import org.slf4j.LoggerFactory;
 import com.google.common.collect.ImmutableMap;
 import com.google.inject.Inject;
 import com.google.inject.servlet.RequestScoped;
+import com.sun.jersey.api.view.Viewable;
 
 /**
  * 테스트용 "Hello" 컨트롤로/리소스.
@@ -195,6 +196,16 @@ public class HelloController {
 		hello.createTestingTable(true);
 		hello.deleteAllTestingTable();
 		return "OK.";
+	}
+
+	/** Viewable 활용해서 JSP/MVC 패턴 구현. */
+	@GET
+	@Path("/viewable/foo")
+	@Produces(MediaType.TEXT_HTML)
+	public Viewable viewableFoo(@Context HttpServletRequest request) {
+		return new Viewable("/foo.jsp",
+				new ImmutableMap.Builder<String, Object>().put("value", "42")
+						.build());
 	}
 
 }

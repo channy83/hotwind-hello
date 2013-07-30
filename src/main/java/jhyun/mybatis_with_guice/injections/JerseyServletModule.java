@@ -53,12 +53,26 @@ public class JerseyServletModule extends ServletModule {
 		 */
 		params.put("com.sun.jersey.config.feature.Redirect", "true");
 		params.put("com.sun.jersey.api.json.POJOMappingFeature", "true");
+		
+		params.put("com.sun.jersey.config.property.JSPTemplatesBasePath", "/WEB-INF/jsp");
+		
+		// FIXME:
+		params.put("com.sun.jersey.config.property.WebPageContentRegex",
+	       "(/(public)/.*)");//|(/.*\\.jsp)|(/WEB-INF/.*\\.jsp)|(/WEB-INF/.*\\.jspf)|(/.*\\.html)|(/favicon\\.ico)|(/robots\\.txt)");
+		
+		
+		
 		// serving urls
 		Configuration config = AppConfig.load();
 		serveRegex(config.getString("default-serve-url-regex", "/public/.*"))
-				.with(DefaultWrapperServlet.class);
+				.with(DefaultWrapperServlet.class);	// FIXME:
+        filter("/*").through(GuiceContainer.class, params);
+
+		/*
 		serve(config.getString("jersey-serve-url-pattern", "/*")).with(
 				GuiceContainer.class, params);
+				*/
+		
 	}
 
 	/**

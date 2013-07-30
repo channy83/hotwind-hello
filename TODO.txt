@@ -20,10 +20,20 @@ DONE * jersey unit-test?
 	DONE - Transactions
 
 
+DONE * Viewable example?
+
+DONE * jsp-el? jstl?
+
+* /public?
+
+* /public config-ize.
+
+* no serve-urls?
+
+
 * javadocs!
 
-
-* WORKFLOW TODOs
+* WORKFLOW DOCS TODOs
 	- maven, eclipse, m2eclipse.
 	- maven and ojdbc.
 	- add new sqlmap?
