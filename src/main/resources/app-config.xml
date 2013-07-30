@@ -9,6 +9,7 @@
 		<jersey-modules>
 			jhyun.mybatis_with_guice.controllers.HelloController
 		</jersey-modules>
+		<jersey-properties-file>jersey.properties</jersey-properties-file>
 		<default-serve-url-regex>/public/.*</default-serve-url-regex>
 		<jersey-serve-url-pattern>/*</jersey-serve-url-pattern>
 	</app>

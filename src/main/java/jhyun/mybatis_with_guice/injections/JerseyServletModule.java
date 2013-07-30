@@ -1,9 +1,12 @@
 package jhyun.mybatis_with_guice.injections;
 
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Properties;
 
 import jhyun.mybatis_with_guice.config.AppConfig;
 import jhyun.mybatis_with_guice.servlets.DefaultWrapperServlet;
@@ -44,35 +47,43 @@ public class JerseyServletModule extends ServletModule {
 				"app.jersey-modules", new ArrayList<Object>());
 		bindJerseyModules(jerseyModuleClassFqns);
 		//
-		Map<String, String> params = new HashMap<String, String>();
-		/**
-		 * <code>
-		//params.put("com.sun.jersey.config.feature.ImplicitViewables", "true");
-		//params.put("com.sun.jersey.config.property.packages", "net.cknudsen.jerseyexample.web");
-		 </code>
-		 */
-		params.put("com.sun.jersey.config.feature.Redirect", "true");
-		params.put("com.sun.jersey.api.json.POJOMappingFeature", "true");
-		
-		params.put("com.sun.jersey.config.property.JSPTemplatesBasePath", "/WEB-INF/jsp");
-		
-		// FIXME:
-		params.put("com.sun.jersey.config.property.WebPageContentRegex",
-	       "(/(public)/.*)");//|(/.*\\.jsp)|(/WEB-INF/.*\\.jsp)|(/WEB-INF/.*\\.jspf)|(/.*\\.html)|(/favicon\\.ico)|(/robots\\.txt)");
-		
-		
-		
-		// serving urls
 		Configuration config = AppConfig.load();
+		final Map<String, String> jerseyProperties = loadJerseyProperties(config);
+		logger.debug(String.format("jersey-properties = %s", jerseyProperties));
+		// FIXME:
 		serveRegex(config.getString("default-serve-url-regex", "/public/.*"))
-				.with(DefaultWrapperServlet.class);	// FIXME:
-        filter("/*").through(GuiceContainer.class, params);
+				.with(DefaultWrapperServlet.class);
+		//
+		final String jerseyServeUrlPattern = config.getString(
+				"jersey-serve-url-pattern", "/*");
+		filter(jerseyServeUrlPattern).through(GuiceContainer.class,
+				jerseyProperties);
+	}
 
-		/*
-		serve(config.getString("jersey-serve-url-pattern", "/*")).with(
-				GuiceContainer.class, params);
-				*/
-		
+	/** Jersey Servlet Filter 설정 로딩. */
+	private Map<String, String> loadJerseyProperties(Configuration config) {
+		final String pFilename = config.getString("jersey-properties-file",
+				"jersey.properties");
+		Properties ps = new Properties();
+		InputStream in = this.getClass().getClassLoader()
+				.getResourceAsStream(pFilename);
+		if (in != null) {
+			try {
+				ps.load(in);
+			} catch (IOException e) {
+				logger.warn(String.format("LOAD FAIL = [%s]", pFilename));
+			} finally {
+				if (in != null)
+					try {
+						in.close();
+					} catch (IOException e) {
+						logger.warn("CLOSE FAIL, WT...", e);
+					}
+			}
+		} else {
+			logger.debug(String.format("[%s] not found, skip.", pFilename));
+		}
+		return new HashMap<String, String>((Map) ps);
 	}
 
 	/**
