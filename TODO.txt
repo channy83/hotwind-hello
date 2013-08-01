@@ -31,6 +31,9 @@ DONE * /public config-ize.
 DONE * no serve-urls?
 
 
+* controller-scan-pkg?
+
+
 * javadocs!
 
 * WORKFLOW DOCS TODOs

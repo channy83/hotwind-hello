@@ -1,4 +1,4 @@
-package jhyun.mybatis_with_guice.controllers;
+package jhyun.hotwind.hello.controllers;
 
 import java.util.HashMap;
 import java.util.List;
@@ -15,9 +15,9 @@ import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 
-import jhyun.mybatis_with_guice.controllers.hello.plus.PlusParams;
-import jhyun.mybatis_with_guice.controllers.hello.plus.PlusResult;
-import jhyun.mybatis_with_guice.sqlmaps.HelloMapper;
+import jhyun.hotwind.hello.controllers.hello.plus.PlusParams;
+import jhyun.hotwind.hello.controllers.hello.plus.PlusResult;
+import jhyun.hotwind.hello.sqlmaps.HelloMapper;
 
 import org.apache.commons.lang.ObjectUtils;
 import org.apache.ibatis.session.SqlSession;

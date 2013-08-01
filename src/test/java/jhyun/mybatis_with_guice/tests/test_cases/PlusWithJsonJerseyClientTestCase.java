@@ -5,8 +5,8 @@ import static org.junit.Assert.assertNotNull;
 
 import javax.ws.rs.core.MediaType;
 
-import jhyun.mybatis_with_guice.controllers.hello.plus.PlusParams;
-import jhyun.mybatis_with_guice.controllers.hello.plus.PlusResult;
+import jhyun.hotwind.hello.controllers.hello.plus.PlusParams;
+import jhyun.hotwind.hello.controllers.hello.plus.PlusResult;
 import jhyun.mybatis_with_guice.tests.helpers.JerseyTestingClient;
 
 import org.junit.Test;

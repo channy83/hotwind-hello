@@ -1,4 +1,4 @@
-package jhyun.mybatis_with_guice.controllers.hello.plus;
+package jhyun.hotwind.hello.controllers.hello.plus;
 
 import java.io.Serializable;
 

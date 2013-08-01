@@ -7,7 +7,7 @@
 			jhyun.hotwind.jersey.JerseyServletModule
 		</guice-modules>
 		<jersey-modules>
-			jhyun.mybatis_with_guice.controllers.HelloController
+			jhyun.hotwind.hello.controllers.HelloController
 		</jersey-modules>
 		<jersey-properties-file>jersey.properties</jersey-properties-file>
 		<jersey-serve-url-pattern>/*</jersey-serve-url-pattern>

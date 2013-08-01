@@ -1,4 +1,4 @@
-package jhyun.mybatis_with_guice.sqlmaps;
+package jhyun.hotwind.hello.sqlmaps;
 
 import java.util.List;
 import java.util.Map;
