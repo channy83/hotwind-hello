@@ -1,7 +1,7 @@
-package jhyun.mybatis_with_guice.tests.test_cases;
+package kr.co.inger.hotwind.hello.tests.test_cases;
 
 import static org.junit.Assert.assertNotNull;
-import jhyun.hotwind.config.AppConfig;
+import kr.co.inger.hotwind.config.AppConfig;
 
 import org.apache.commons.configuration.Configuration;
 import org.junit.Test;

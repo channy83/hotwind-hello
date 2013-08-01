@@ -3,11 +3,11 @@
 	<app>
 		<environment>development</environment>
 		<guice-modules>
-			jhyun.hotwind.mybatis.MyBatisXmlModule,
-			jhyun.hotwind.jersey.JerseyServletModule
+			kr.co.inger.hotwind.mybatis.MyBatisXmlModule,
+			kr.co.inger.hotwind.jersey.JerseyServletModule
 		</guice-modules>
 		<jersey-modules>
-			jhyun.hotwind.hello.controllers.HelloController
+			kr.co.inger.hotwind.hello.controllers.HelloController
 		</jersey-modules>
 		<jersey-properties-file>jersey.properties</jersey-properties-file>
 		<jersey-serve-url-pattern>/*</jersey-serve-url-pattern>

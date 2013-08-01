@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="jhyun.hotwind.hello.sqlmaps.HelloMapper">
+<mapper namespace="kr.co.inger.hotwind.hello.sqlmaps.HelloMapper">
 	<!-- NOTE: mapper xml은 이를 자바측에서 접근할때 활용한 매퍼 인터페이스를 하나 갖춰야 합니다. 이는 DAO와 유사하지만, 
 		DAO이 모든 내용을 손수 구현해준것과 달리, XML와 인터페이스만으로 dynamic-proxy으로서 이를 자동으로 구현해줍니다. -->
 

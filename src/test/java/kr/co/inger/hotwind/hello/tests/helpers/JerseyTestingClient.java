@@ -1,6 +1,6 @@
-package jhyun.mybatis_with_guice.tests.helpers;
+package kr.co.inger.hotwind.hello.tests.helpers;
 
-import jhyun.hotwind.config.AppConfig;
+import kr.co.inger.hotwind.config.AppConfig;
 
 import org.apache.commons.configuration.Configuration;
 

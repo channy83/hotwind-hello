@@ -1,10 +1,10 @@
-package jhyun.mybatis_with_guice.tests;
+package kr.co.inger.hotwind.hello.tests;
 
-import jhyun.mybatis_with_guice.tests.test_cases.AppConfigTestCase;
-import jhyun.mybatis_with_guice.tests.test_cases.DirtyAndCleanTransactionClientTestCase;
-import jhyun.mybatis_with_guice.tests.test_cases.MybatisWithGuiceTestCase;
-import jhyun.mybatis_with_guice.tests.test_cases.PlusWithJsonJerseyClientTestCase;
-import jhyun.mybatis_with_guice.tests.test_cases.SimpleTransactionClientTestCase;
+import kr.co.inger.hotwind.hello.tests.test_cases.AppConfigTestCase;
+import kr.co.inger.hotwind.hello.tests.test_cases.DirtyAndCleanTransactionClientTestCase;
+import kr.co.inger.hotwind.hello.tests.test_cases.MybatisWithGuiceTestCase;
+import kr.co.inger.hotwind.hello.tests.test_cases.PlusWithJsonJerseyClientTestCase;
+import kr.co.inger.hotwind.hello.tests.test_cases.SimpleTransactionClientTestCase;
 
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;

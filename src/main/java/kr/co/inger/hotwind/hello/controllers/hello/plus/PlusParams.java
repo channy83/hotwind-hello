@@ -1,4 +1,4 @@
-package jhyun.hotwind.hello.controllers.hello.plus;
+package kr.co.inger.hotwind.hello.controllers.hello.plus;
 
 import java.io.Serializable;
 

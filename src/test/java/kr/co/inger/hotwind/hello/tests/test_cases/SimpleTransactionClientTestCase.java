@@ -1,4 +1,4 @@
-package jhyun.mybatis_with_guice.tests.test_cases;
+package kr.co.inger.hotwind.hello.tests.test_cases;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
@@ -6,8 +6,8 @@ import static org.junit.Assert.assertTrue;
 
 import java.util.List;
 
-import jhyun.hotwind.guice.Guicer;
-import jhyun.mybatis_with_guice.tests.helpers.SimpleTransactionHelper;
+import kr.co.inger.hotwind.guice.Guicer;
+import kr.co.inger.hotwind.hello.tests.helpers.SimpleTransactionHelper;
 
 import org.junit.Test;
 

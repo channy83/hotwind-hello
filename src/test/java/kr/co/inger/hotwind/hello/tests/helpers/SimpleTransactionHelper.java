@@ -1,4 +1,4 @@
-package jhyun.mybatis_with_guice.tests.helpers;
+package kr.co.inger.hotwind.hello.tests.helpers;
 
 import java.util.List;
 import java.util.Map;

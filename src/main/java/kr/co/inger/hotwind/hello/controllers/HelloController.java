@@ -1,4 +1,4 @@
-package jhyun.hotwind.hello.controllers;
+package kr.co.inger.hotwind.hello.controllers;
 
 import java.util.HashMap;
 import java.util.List;
@@ -15,9 +15,9 @@ import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 
-import jhyun.hotwind.hello.controllers.hello.plus.PlusParams;
-import jhyun.hotwind.hello.controllers.hello.plus.PlusResult;
-import jhyun.hotwind.hello.sqlmaps.HelloMapper;
+import kr.co.inger.hotwind.hello.controllers.hello.plus.PlusParams;
+import kr.co.inger.hotwind.hello.controllers.hello.plus.PlusResult;
+import kr.co.inger.hotwind.hello.sqlmaps.HelloMapper;
 
 import org.apache.commons.lang.ObjectUtils;
 import org.apache.ibatis.session.SqlSession;

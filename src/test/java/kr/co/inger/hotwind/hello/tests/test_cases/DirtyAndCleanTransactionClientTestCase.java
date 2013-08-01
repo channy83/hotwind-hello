@@ -1,13 +1,15 @@
-package jhyun.mybatis_with_guice.tests.test_cases;
+package kr.co.inger.hotwind.hello.tests.test_cases;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
 
 import java.util.List;
 
 import javax.ws.rs.core.MediaType;
 
-import jhyun.hotwind.guice.Guicer;
-import jhyun.mybatis_with_guice.tests.helpers.JerseyTestingClient;
-import jhyun.mybatis_with_guice.tests.helpers.SimpleTransactionHelper;
-import static org.junit.Assert.*;
+import kr.co.inger.hotwind.guice.Guicer;
+import kr.co.inger.hotwind.hello.tests.helpers.JerseyTestingClient;
+import kr.co.inger.hotwind.hello.tests.helpers.SimpleTransactionHelper;
 
 import org.junit.Test;
 

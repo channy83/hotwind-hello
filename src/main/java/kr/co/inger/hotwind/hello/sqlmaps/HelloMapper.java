@@ -1,4 +1,4 @@
-package jhyun.hotwind.hello.sqlmaps;
+package kr.co.inger.hotwind.hello.sqlmaps;
 
 import java.util.List;
 import java.util.Map;

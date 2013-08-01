@@ -1,13 +1,13 @@
-package jhyun.mybatis_with_guice.tests.test_cases;
+package kr.co.inger.hotwind.hello.tests.test_cases;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
 import javax.ws.rs.core.MediaType;
 
-import jhyun.hotwind.hello.controllers.hello.plus.PlusParams;
-import jhyun.hotwind.hello.controllers.hello.plus.PlusResult;
-import jhyun.mybatis_with_guice.tests.helpers.JerseyTestingClient;
+import kr.co.inger.hotwind.hello.controllers.hello.plus.PlusParams;
+import kr.co.inger.hotwind.hello.controllers.hello.plus.PlusResult;
+import kr.co.inger.hotwind.hello.tests.helpers.JerseyTestingClient;
 
 import org.junit.Test;
 import org.slf4j.Logger;
