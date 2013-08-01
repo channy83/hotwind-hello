@@ -1,4 +1,4 @@
-package jhyun.mybatis_with_guice.injections;
+package jhyun.hotwind.guice;
 
 import javax.servlet.ServletContextListener;
 

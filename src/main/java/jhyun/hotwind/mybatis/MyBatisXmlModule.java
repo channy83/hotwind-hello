@@ -1,6 +1,7 @@
-package jhyun.mybatis_with_guice.injections;
+package jhyun.hotwind.mybatis;
 
-import jhyun.mybatis_with_guice.config.AppConfig;
+import jhyun.hotwind.config.AppConfig;
+import jhyun.hotwind.guice.Guicer;
 
 import org.apache.commons.configuration.Configuration;
 import org.mybatis.guice.XMLMyBatisModule;

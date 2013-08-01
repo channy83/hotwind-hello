@@ -2,7 +2,7 @@ package jhyun.mybatis_with_guice.tests.test_cases;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
-import jhyun.mybatis_with_guice.injections.Guicer;
+import jhyun.hotwind.guice.Guicer;
 import jhyun.mybatis_with_guice.sqlmaps.HelloMapper;
 
 import org.apache.ibatis.session.SqlSession;

@@ -1,6 +1,6 @@
 package jhyun.mybatis_with_guice.tests.helpers;
 
-import jhyun.mybatis_with_guice.config.AppConfig;
+import jhyun.hotwind.config.AppConfig;
 
 import org.apache.commons.configuration.Configuration;
 

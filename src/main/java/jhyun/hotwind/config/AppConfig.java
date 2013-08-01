@@ -1,4 +1,4 @@
-package jhyun.mybatis_with_guice.config;
+package jhyun.hotwind.config;
 
 import java.net.URL;
 

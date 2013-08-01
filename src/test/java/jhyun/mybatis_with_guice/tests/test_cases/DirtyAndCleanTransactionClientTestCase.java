@@ -4,11 +4,11 @@ import java.util.List;
 
 import javax.ws.rs.core.MediaType;
 
-import jhyun.mybatis_with_guice.injections.Guicer;
+import jhyun.hotwind.guice.Guicer;
 import jhyun.mybatis_with_guice.tests.helpers.JerseyTestingClient;
 import jhyun.mybatis_with_guice.tests.helpers.SimpleTransactionHelper;
-
 import static org.junit.Assert.*;
+
 import org.junit.Test;
 
 import com.google.inject.Inject;

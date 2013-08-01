@@ -1,4 +1,4 @@
-package jhyun.mybatis_with_guice.injections;
+package jhyun.hotwind.jersey;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -8,8 +8,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Properties;
 
-import jhyun.mybatis_with_guice.config.AppConfig;
-import jhyun.mybatis_with_guice.servlets.DefaultWrapperServlet;
+import jhyun.hotwind.config.AppConfig;
 
 import org.apache.commons.configuration.Configuration;
 import org.slf4j.Logger;
@@ -33,7 +32,6 @@ import com.sun.jersey.guice.spi.container.servlet.GuiceContainer;
  * 
  * @see ServletModule
  * @see GuiceContainer
- * @see DefaultWrapperServlet
  * @link <a href="http://code.google.com/p/google-guice/wiki/ServletModule">
  *       ServletModule</a>
  */

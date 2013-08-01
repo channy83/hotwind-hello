@@ -3,8 +3,8 @@
 	<app>
 		<environment>development</environment>
 		<guice-modules>
-			jhyun.mybatis_with_guice.injections.MyBatisXmlModule,
-			jhyun.mybatis_with_guice.injections.JerseyServletModule
+			jhyun.hotwind.mybatis.MyBatisXmlModule,
+			jhyun.hotwind.jersey.JerseyServletModule
 		</guice-modules>
 		<jersey-modules>
 			jhyun.mybatis_with_guice.controllers.HelloController

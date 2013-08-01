@@ -6,7 +6,7 @@ import static org.junit.Assert.assertTrue;
 
 import java.util.List;
 
-import jhyun.mybatis_with_guice.injections.Guicer;
+import jhyun.hotwind.guice.Guicer;
 import jhyun.mybatis_with_guice.tests.helpers.SimpleTransactionHelper;
 
 import org.junit.Test;

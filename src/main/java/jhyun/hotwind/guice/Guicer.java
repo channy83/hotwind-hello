@@ -1,9 +1,9 @@
-package jhyun.mybatis_with_guice.injections;
+package jhyun.hotwind.guice;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import jhyun.mybatis_with_guice.config.AppConfig;
+import jhyun.hotwind.config.AppConfig;
 
 import org.apache.commons.configuration.Configuration;
 import org.slf4j.Logger;
