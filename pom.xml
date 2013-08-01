@@ -46,6 +46,11 @@
 			<artifactId>hotwind</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
+		<dependency>
+			<groupId>kr.co.inger</groupId>
+			<artifactId>hotwind-mybatis</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>		
 		
 		<!-- JUnit -->
 		<dependency>
