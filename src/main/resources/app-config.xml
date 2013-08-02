@@ -6,9 +6,9 @@
 			kr.co.inger.hotwind.mybatis.MyBatisXmlModule,
 			kr.co.inger.hotwind.jersey.JerseyServletModule
 		</guice-modules>
-		<jersey-modules>
+		<jaxrs-resources>
 			kr.co.inger.hotwind.hello.controllers.HelloController
-		</jersey-modules>
+		</jaxrs-resources>
 		<jersey-properties-file>jersey.properties</jersey-properties-file>
 		<jersey-serve-url-pattern>/*</jersey-serve-url-pattern>
 	</app>
