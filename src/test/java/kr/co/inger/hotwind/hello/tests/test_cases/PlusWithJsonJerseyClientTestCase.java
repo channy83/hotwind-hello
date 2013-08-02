@@ -5,8 +5,8 @@ import static org.junit.Assert.assertNotNull;
 
 import javax.ws.rs.core.MediaType;
 
-import kr.co.inger.hotwind.hello.controllers.hello.plus.PlusParams;
-import kr.co.inger.hotwind.hello.controllers.hello.plus.PlusResult;
+import kr.co.inger.hotwind.hello.resources.hello.plus.PlusParams;
+import kr.co.inger.hotwind.hello.resources.hello.plus.PlusResult;
 import kr.co.inger.hotwind.hello.tests.helpers.JerseyTestingClient;
 
 import org.junit.Test;

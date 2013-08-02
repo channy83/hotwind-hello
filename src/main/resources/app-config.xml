@@ -2,16 +2,29 @@
 <config>
 	<app>
 		<environment>development</environment>
+		
 		<guice-modules>
 			kr.co.inger.hotwind.mybatis.MyBatisXmlModule,
 			kr.co.inger.hotwind.jersey.JerseyServletModule
 		</guice-modules>
+		
+		<!-- 
 		<jaxrs-resources>
 			kr.co.inger.hotwind.hello.controllers.HelloController
 		</jaxrs-resources>
+		-->
+		
+		<app.jaxrs-resources-root-packages>
+			kr.co.inger.hotwind.hello.controllers
+		</app.jaxrs-resources-root-packages>
+		<app.jaxrs-resources-annotations>
+			kr.co.inger.hotwind.jaxrs.JaxRsResource
+		</app.jaxrs-resources-annotations>
+		
 		<jersey-properties-file>jersey.properties</jersey-properties-file>
 		<jersey-serve-url-pattern>/*</jersey-serve-url-pattern>
 	</app>
+	
 	<test>
 		<api-url-prefix>http://localhost:8080</api-url-prefix>
 	</test>

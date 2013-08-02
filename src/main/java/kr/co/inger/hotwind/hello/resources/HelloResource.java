@@ -1,4 +1,4 @@
-package kr.co.inger.hotwind.hello.controllers;
+package kr.co.inger.hotwind.hello.resources;
 
 import java.util.HashMap;
 import java.util.List;
@@ -15,9 +15,10 @@ import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 
-import kr.co.inger.hotwind.hello.controllers.hello.plus.PlusParams;
-import kr.co.inger.hotwind.hello.controllers.hello.plus.PlusResult;
+import kr.co.inger.hotwind.hello.resources.hello.plus.PlusParams;
+import kr.co.inger.hotwind.hello.resources.hello.plus.PlusResult;
 import kr.co.inger.hotwind.hello.sqlmaps.HelloMapper;
+import kr.co.inger.hotwind.jaxrs.JaxRsResource;
 
 import org.apache.commons.lang.ObjectUtils;
 import org.apache.ibatis.session.SqlSession;
@@ -37,11 +38,12 @@ import com.sun.jersey.api.view.Viewable;
  * @since 2012-08-30
  * 
  */
+@JaxRsResource
 @Path("/hello")
 @RequestScoped
-public class HelloController {
+public class HelloResource {
 
-	private Logger logger = LoggerFactory.getLogger(HelloController.class);
+	private Logger logger = LoggerFactory.getLogger(HelloResource.class);
 
 	/** very cliched... */
 	@GET
