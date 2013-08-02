@@ -14,12 +14,12 @@
 		</jaxrs-resources>
 		-->
 		
-		<app.jaxrs-resources-root-packages>
-			kr.co.inger.hotwind.hello.controllers
-		</app.jaxrs-resources-root-packages>
-		<app.jaxrs-resources-annotations>
+		<jaxrs-resources-root-packages>
+			kr.co.inger.hotwind.hello.resources
+		</jaxrs-resources-root-packages>
+		<jaxrs-resources-annotations>
 			kr.co.inger.hotwind.jaxrs.JaxRsResource
-		</app.jaxrs-resources-annotations>
+		</jaxrs-resources-annotations>
 		
 		<jersey-properties-file>jersey.properties</jersey-properties-file>
 		<jersey-serve-url-pattern>/*</jersey-serve-url-pattern>
