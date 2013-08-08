@@ -5,7 +5,8 @@
 		
 		<guice-modules>
 			kr.co.inger.hotwind.mybatis.MyBatisXmlModule,
-			kr.co.inger.hotwind.jersey.JerseyServletModule
+			kr.co.inger.hotwind.jersey.JerseyServletModule,
+			kr.co.inger.hotwind.cache.JavaxCacheModule
 		</guice-modules>
 		
 		<!-- 
@@ -23,6 +24,10 @@
 		
 		<jersey-properties-file>jersey.properties</jersey-properties-file>
 		<jersey-serve-url-pattern>/*</jersey-serve-url-pattern>
+		
+		
+		<javax-cache-init-groovy-file>jcache-infinispan.groovy</javax-cache-init-groovy-file>
+		
 	</app>
 	
 	<test>
