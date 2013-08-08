@@ -2,13 +2,17 @@ package kr.co.inger.hotwind.hello.resources;
 
 import java.util.UUID;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
+import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 
 import kr.co.inger.hotwind.jaxrs.JaxRsResource;
+import kr.co.inger.hotwind.request_check.CheckRequest;
+import kr.co.inger.hotwind.request_check.RequestProvider;
 import kr.co.inger.hotwind.request_check.backend.RequestCheckKvStore;
 
 import org.slf4j.Logger;
@@ -27,7 +31,7 @@ import com.google.inject.servlet.RequestScoped;
 @JaxRsResource
 @Path("/check-request-hello")
 @RequestScoped
-public class CheckRequestResource {
+public class CheckRequestResource implements RequestProvider {
 
 	private Logger logger = LoggerFactory.getLogger(CheckRequestResource.class);
 
@@ -65,6 +69,21 @@ public class CheckRequestResource {
 		}
 	}
 
-	// TODO: should-logged-in
+	@Context
+	private HttpServletRequest request;
+
+	@Override
+	public HttpServletRequest getHttpServletRequest() {
+		return request;
+	}
+
+	@CheckRequest(targetField = "accessToken")
+	@GET
+	@Path("/shouldLoggedInWithPathParam/{accessToken}")
+	@Produces(MediaType.TEXT_PLAIN)
+	public String shouldLoggedInWithPathParam(
+			@PathParam("accessToken") String accessToken) {
+		return "OK!!";
+	}
 
 }
