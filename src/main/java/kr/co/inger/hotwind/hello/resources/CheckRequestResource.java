@@ -94,6 +94,11 @@ public class CheckRequestResource implements RequestProvider {
 		return "OK!! (http-header)";
 	}
 
-	// TODO: shouldLoggedInWithQueryParam
-
+	@CheckRequest(targetField = "accessToken")
+	@GET
+	@Path("/shouldLoggedInWithQueryParam")
+	@Produces(MediaType.TEXT_PLAIN)
+	public String shouldLoggedInWithQueryParam() {
+		return "OK!! (query-param)";
+	}
 }
