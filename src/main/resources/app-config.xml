@@ -6,7 +6,9 @@
 		<guice-modules>
 			kr.co.inger.hotwind.mybatis.MyBatisXmlModule,
 			kr.co.inger.hotwind.jersey.JerseyServletModule,
-			kr.co.inger.hotwind.cache.JavaxCacheModule
+			kr.co.inger.hotwind.cache.JavaxCacheModule,
+			kr.co.inger.hotwind.request_check.backend.cache.JCacheRequestCheckKvStoreModule,
+			kr.co.inger.hotwind.request_check.RequestCheckModule
 		</guice-modules>
 		
 		<!-- 
