@@ -83,7 +83,17 @@ public class CheckRequestResource implements RequestProvider {
 	@Produces(MediaType.TEXT_PLAIN)
 	public String shouldLoggedInWithPathParam(
 			@PathParam("accessToken") String accessToken) {
-		return "OK!!";
+		return "OK!! (path-param)";
 	}
+
+	@CheckRequest(httpHeaderName = "x-hotwind-accesstoken")
+	@GET
+	@Path("/shouldLoggedInWithHttpHeader")
+	@Produces(MediaType.TEXT_PLAIN)
+	public String shouldLoggedInWithHttpHeader() {
+		return "OK!! (http-header)";
+	}
+
+	// TODO: shouldLoggedInWithQueryParam
 
 }
