@@ -14,6 +14,7 @@ import kr.co.inger.hotwind.jaxrs.JaxRsResource;
 import kr.co.inger.hotwind.request_check.CheckRequest;
 import kr.co.inger.hotwind.request_check.RequestProvider;
 import kr.co.inger.hotwind.request_check.backend.RequestCheckKvStore;
+import kr.co.inger.hotwind.request_check.session.AccessTokenedSession;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -100,5 +101,13 @@ public class CheckRequestResource implements RequestProvider {
 	@Produces(MediaType.TEXT_PLAIN)
 	public String shouldLoggedInWithQueryParam() {
 		return "OK!! (query-param)";
+	}
+	
+	@CheckRequest(targetField = "accessToken")
+	@GET
+	@Path("/foo")
+	@Produces(MediaType.TEXT_PLAIN) 
+	public String foo(@Context AccessTokenedSession v) {
+		return "foobar!";
 	}
 }
