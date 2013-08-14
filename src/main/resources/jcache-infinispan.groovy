@@ -16,3 +16,4 @@ def configCache(cacheName) {
 // 
 configCache("hello")
 configCache("JCacheRequestCheckKvStore")
+configCache("TmpFileStore")

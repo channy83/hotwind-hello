@@ -46,19 +46,19 @@
 			<artifactId>hotwind</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>kr.co.inger</groupId>
 			<artifactId>hotwind-mybatis</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>kr.co.inger</groupId>
 			<artifactId>hotwind-cache</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
-		</dependency>		
-		
+		</dependency>
+
 
 		<!-- JUnit -->
 		<dependency>
@@ -74,13 +74,22 @@
 			<artifactId>hsqldb</artifactId>
 			<version>2.2.8</version>
 		</dependency>
-		
+
 		<!-- Infinispan: hotwind-cache backed. -->
 		<dependency>
 			<groupId>org.infinispan</groupId>
 			<artifactId>infinispan-jcache</artifactId>
 			<version>5.3.0.Final</version>
-		</dependency>		
+		</dependency>
+
+		<!-- Commons IO -->
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>2.4</version>
+		</dependency>
+
+
 
 	</dependencies>
 </project>
