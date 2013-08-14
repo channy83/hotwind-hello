@@ -1,6 +1,7 @@
 package kr.co.inger.hotwind.hello.resources;
 
 import java.io.IOException;
+
 import java.io.InputStream;
 import java.util.UUID;
 
@@ -12,6 +13,7 @@ import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
+import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.ResponseBuilder;
@@ -20,6 +22,7 @@ import javax.ws.rs.core.Response.Status;
 import kr.co.inger.hotwind.cache.InjectCache;
 import kr.co.inger.hotwind.hello.resources.file_hello.FileEntry;
 import kr.co.inger.hotwind.jaxrs.JaxRsResource;
+import kr.co.inger.hotwind.request_check.session.AccessTokenedSession;
 
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang.ObjectUtils;
@@ -104,5 +107,12 @@ public class FileHelloResource {
 				String.format("inline; filename=\"%s\"", e.getFilename()));
 		//
 		return response.build();
+	}
+	
+	@GET
+	@Path("/foo")
+	@Produces(MediaType.TEXT_PLAIN) 
+	public String foo(@Context AccessTokenedSession v) {
+		return "foobar!";
 	}
 }
