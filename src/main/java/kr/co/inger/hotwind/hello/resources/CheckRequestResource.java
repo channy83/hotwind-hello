@@ -44,7 +44,7 @@ public class CheckRequestResource implements RequestProvider {
 	@Produces(MediaType.TEXT_PLAIN)
 	public String login() {
 		final String k = UUID.randomUUID().toString();
-		requestCheckKvStore.store(k, "true");
+		requestCheckKvStore.create(k);
 		return k;
 	}
 
