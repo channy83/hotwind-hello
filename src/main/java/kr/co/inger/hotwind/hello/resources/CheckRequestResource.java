@@ -16,6 +16,7 @@ import kr.co.inger.hotwind.request_check.RequestProvider;
 import kr.co.inger.hotwind.request_check.backend.RequestCheckKvStore;
 import kr.co.inger.hotwind.request_check.session.AccessTokenedSession;
 
+import org.apache.commons.lang.ObjectUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -105,9 +106,14 @@ public class CheckRequestResource implements RequestProvider {
 
 	@CheckRequest(targetField = "accessToken")
 	@GET
-	@Path("/foo")
+	@Path("/put/{accessToken}/{key}/{val}")
 	@Produces(MediaType.TEXT_PLAIN)
-	public String foo(@Context AccessTokenedSession v) {
-		return "foobar!";
+	public String putIntoSession(
+			@PathParam("accessToken") final String accessToken,
+			@PathParam("key") final String key,
+			@PathParam("val") final String val, @Context AccessTokenedSession v) {
+		//
+		v.getInnerMap().put(key, val);
+		return ObjectUtils.toString(v.getInnerMap());
 	}
 }
