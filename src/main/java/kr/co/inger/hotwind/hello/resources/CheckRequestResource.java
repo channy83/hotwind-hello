@@ -80,33 +80,33 @@ public class CheckRequestResource implements RequestProvider {
 
 	@CheckRequest(targetField = "accessToken")
 	@GET
-	@Path("/shouldLoggedInWithPathParam/{accessToken}")
+	@Path("/checkWithPathParam/{accessToken}")
 	@Produces(MediaType.TEXT_PLAIN)
-	public String shouldLoggedInWithPathParam(
+	public String checkWithPathParam(
 			@PathParam("accessToken") String accessToken) {
 		return "OK!! (path-param)";
 	}
 
 	@CheckRequest(httpHeaderName = "x-hotwind-accesstoken")
 	@GET
-	@Path("/shouldLoggedInWithHttpHeader")
+	@Path("/checkWithHeader")
 	@Produces(MediaType.TEXT_PLAIN)
-	public String shouldLoggedInWithHttpHeader() {
+	public String checkWithHeader() {
 		return "OK!! (http-header)";
 	}
 
 	@CheckRequest(targetField = "accessToken")
 	@GET
-	@Path("/shouldLoggedInWithQueryParam")
+	@Path("/checkWithQueryParam")
 	@Produces(MediaType.TEXT_PLAIN)
-	public String shouldLoggedInWithQueryParam() {
+	public String checkWithQueryParam() {
 		return "OK!! (query-param)";
 	}
-	
+
 	@CheckRequest(targetField = "accessToken")
 	@GET
 	@Path("/foo")
-	@Produces(MediaType.TEXT_PLAIN) 
+	@Produces(MediaType.TEXT_PLAIN)
 	public String foo(@Context AccessTokenedSession v) {
 		return "foobar!";
 	}
