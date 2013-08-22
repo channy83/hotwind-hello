@@ -1,12 +1,10 @@
 package kr.co.inger.hotwind.hello.resources;
 
 import java.io.IOException;
-
 import java.io.InputStream;
 import java.util.UUID;
 
 import javax.activation.MimetypesFileTypeMap;
-import javax.cache.Cache;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
@@ -19,13 +17,14 @@ import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.ResponseBuilder;
 import javax.ws.rs.core.Response.Status;
 
-import kr.co.inger.hotwind.cache.InjectCache;
 import kr.co.inger.hotwind.hello.resources.file_hello.FileEntry;
 import kr.co.inger.hotwind.jaxrs.JaxRsResource;
+import kr.co.inger.hotwind.jcs.InjectJcs;
 import kr.co.inger.hotwind.request_check.session.AccessTokenedSession;
 
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang.ObjectUtils;
+import org.apache.jcs.JCS;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -49,8 +48,8 @@ public class FileHelloResource {
 
 	private Logger logger = LoggerFactory.getLogger(FileHelloResource.class);
 
-	@InjectCache(cacheName = "TmpFileStore")
-	private Cache<String, FileEntry> tmpFileCache;
+	@InjectJcs(cacheName = "TmpFileStore")
+	private JCS tmpFileCache;
 
 	@GET
 	@Path("/uploadForm")
@@ -66,12 +65,12 @@ public class FileHelloResource {
 	@Produces(MediaType.TEXT_PLAIN)
 	public String upload(@FormDataParam("file") final InputStream fileStream,
 			@FormDataParam("file") final FormDataContentDisposition fileDetail)
-			throws IOException {
+			throws IOException, Exception {
 		// 업로드된 내용을 FileEntry으로 만들기.
 		FileEntry e = uploadIntoFileEntry(fileStream, fileDetail);
 		//
 		final String uuid = UUID.randomUUID().toString();
-		tmpFileCache.put(uuid, e);
+		tmpFileCache.putSafe(uuid, e);
 		//
 		return String.format("file-id=[%s] file=[%s]", uuid,
 				ObjectUtils.toString(e));
@@ -92,7 +91,7 @@ public class FileHelloResource {
 	@GET
 	@Path("/download/{uuid}")
 	public Response download(@PathParam("uuid") final String uuid) {
-		FileEntry e = tmpFileCache.get(uuid);
+		FileEntry e = (FileEntry) tmpFileCache.get(uuid);
 		if (null == e) {
 			return Response.status(Status.NOT_FOUND)
 					.entity(String.format("FILE NOT FOUND [%s]", uuid)).build();
