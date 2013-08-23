@@ -7,7 +7,8 @@
 			kr.co.inger.hotwind.mybatis.MyBatisXmlModule,
 			kr.co.inger.hotwind.jersey.JerseyServletModule,
 			kr.co.inger.hotwind.jcs.JcsModule,
-			kr.co.inger.hotwind.request_check.backend.jcs.JcsRequestCheckKvStoreModule,
+			kr.co.inger.hotwind.jedis.JedisModule,
+			kr.co.inger.hotwind.request_check.backend.jedis.JedisRequestCheckKvStoreModule,
 			kr.co.inger.hotwind.request_check.RequestCheckModule
 		</guice-modules>
 		
